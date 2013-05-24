@@ -4,21 +4,14 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>Untitled Document</title>
 <style>
-.redsquare {
-	background: #F00;
-	width: 25px;
-	height: 25px;
-}
-.bluesquare {
-	background: #00F;
-	width: 25px;
-	height: 25px;
-}
-.greensquare {
-	background: #060;
-	width: 25px;
-	height: 25px;
-}
+.square { width: 25px; height: 25px; }
+.redsquare { background: #F00; }
+.bluesquare { background: #00F; }
+.purplesquare { background: #639; }
+.greensquare { background: #060; }
+.orangesquare { background: #F60; }
+.yellowsquare { background: #FF0; }
+.blacksquare { background: #000; }
 </style>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
 </head>
@@ -29,14 +22,14 @@
 </div>
 
 <script type="text/javascript">
-var colorClasses = ["redsquare","bluesquare","greensquare"];
+var colorClasses = ["redsquare","bluesquare","purplesquare","greensquare","orangesquare","yellowsquare","blacksquare"];
 
 function getRandomInt(min, max) {
   	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 	
 $("body").delegate(".square", "click", function(){
-	var randomColor = colorClasses[getRandomInt(0,2)];
+	var randomColor = colorClasses[getRandomInt(0,6)];
 	
 	$('.container').append('<div class="square '+ randomColor +'"></div>');
 });
