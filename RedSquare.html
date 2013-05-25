@@ -2,9 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-<title>Untitled Document</title>
+<title>RedSquare</title>
 <style>
-.square { width: 25px; height: 25px; }
+.square { width: 25px; height: 25px; float: left; }
 .redsquare { background: #F00; }
 .bluesquare { background: #00F; }
 .purplesquare { background: #639; }
@@ -27,7 +27,7 @@ var colorClasses = ["redsquare","bluesquare","purplesquare","greensquare","orang
 function getRandomInt(min, max) {
   	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-	
+
 $("body").delegate(".square", "click", function(){
 	var randomColor = colorClasses[getRandomInt(0,6)];
 	
